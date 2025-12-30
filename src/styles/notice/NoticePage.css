@@ -1,0 +1,158 @@
+.notice-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.notice-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.notice-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* header */
+.notice-header {
+  margin-bottom: 32px;
+}
+
+.notice-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.notice-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.notice-sub {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* list */
+.notice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notice-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.notice-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notice-card-content {
+  padding: 24px;
+}
+
+/* item */
+.notice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.notice-item-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.notice-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.notice-hit {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.notice-eye {
+  width: 16px;
+  height: 16px;
+}
+
+/* content */
+.notice-content {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+/* pagination */
+.notice-pagination {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* state */
+.notice-center {
+  text-align: center;
+  padding: 40px;
+}
+
+.notice-center.error {
+  color: #ef4444;
+}
+
+/* 일반 카드 스타일 유지 */
+.notice-card {
+  transition: all 0.2s ease;
+  border: 1px solid #e5e7eb;
+  margin-bottom: 12px;
+}
+
+/* 상단 고정 카드 특별 효과 */
+.notice-card.pinned {
+  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* '중요' 뱃지 스타일 */
+.notice-pin-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #3b82f6; /* 파란색 포인트 */
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* 고정글 제목 강조 */
+.notice-card.pinned .notice-item-title {
+  color: var(--text-main); 
+  font-weight: 700;
+}
+
+/* 호버 효과 */
+.notice-card:hover {
+  transform: translateY(-2px);
+  border-color: #3b82f6;
+}

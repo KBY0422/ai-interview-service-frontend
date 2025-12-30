@@ -1,0 +1,41 @@
+# Frontend CI Workflow
+# 프론트엔드 빌드 검증용 CI
+
+# 워크플로우 이름 (GitHub Actions 화면에 표시됨)
+name: Frontend CI
+
+# 언제 실행할 것인가
+on:
+  # Pull Request가 생성되거나 업데이트될 때 실행
+  pull_request:
+    # develop 또는 main 브랜치로 들어오는 PR만 대상
+    branches: [ develop, main ]
+
+# 실행할 작업 정의
+jobs:
+  build:
+    # 실행 환경 (GitHub에서 제공하는 Ubuntu 최신 버전)
+    runs-on: ubuntu-latest
+
+    # Job 안에서 실행할 단계
+    steps:
+      # 현재 PR의 코드를 체크아웃
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Node.js 환경설정
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          # 프로젝트에서 사용하는 Node 버전
+          node-version: 20
+
+      # 의존성 설치
+      # npm install 대신 npm ci 사용
+      - name: Install dependencies
+        run: npm ci
+
+      # 프론트앤드 빌드 실행
+      # 빌드 실패 시 PR 머지 불가
+      - name: Build
+        run: npm run build

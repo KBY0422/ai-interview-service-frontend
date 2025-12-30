@@ -1,0 +1,33 @@
+.inquiry-update-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 메인 */
+.update-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.update-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 폼 */
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* 버튼 */
+.button-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.button-group button + button {
+  margin-left: 8px;
+}

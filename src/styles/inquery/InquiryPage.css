@@ -1,0 +1,170 @@
+/* ===== 레이아웃 ===== */
+.inquiry-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inquiry-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.inquiry-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* ===== 헤더 ===== */
+.inquiry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.inquiry-title {
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inquiry-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.inquiry-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+.inquiry-write-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+}
+
+/* ===== 리스트 ===== */
+.inquiry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ===== 카드 ===== */
+.inquiry-card {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.inquiry-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.inquiry-card-content {
+  padding: 24px;
+}
+
+.inquiry-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* ===== 좌측 ===== */
+.inquiry-left {
+  flex: 1;
+}
+
+.inquiry-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inquiry-card-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.inquiry-writer {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.inquiry-preview {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* ===== 우측 ===== */
+.inquiry-right {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inquiry-date {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ===== 상태 배지 ===== */
+.status {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.status-wait {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-done {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+/* ===== 카테고리 ===== */
+.category {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.category-qna {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.category-voice {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+/* ===== 상태 ===== */
+.inquiry-loading,
+.inquiry-error {
+  text-align: center;
+  padding: 24px;
+}
+
+.inquiry-error {
+  color: #dc2626;
+}
+
+/* ===== 페이지네이션 ===== */
+.inquiry-pagination {
+  max-width: 1024px;
+  margin: 24px auto;
+}

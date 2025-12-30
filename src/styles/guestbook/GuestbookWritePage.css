@@ -1,0 +1,35 @@
+/* 페이지 전체 레이아웃 */
+.write-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main 영역 */
+.write-main {
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 16px;
+}
+
+/* 카드 감싸는 영역 */
+.write-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 폼 내부 간격 (space-y-4 대체) */
+.write-form > * + * {
+  margin-top: 16px;
+}
+
+/* 버튼 영역 */
+.write-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.write-actions button + button {
+  margin-left: 8px;
+}

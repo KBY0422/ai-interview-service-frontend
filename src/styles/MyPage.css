@@ -1,0 +1,175 @@
+/* 전체 페이지 구조 */
+.mypage-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.mypage-main {
+  flex: 1;
+  max-width: 960px; /* 최대 너비 */
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 45px;
+  padding: 3rem 1rem; /* py-12 px-4 */
+}
+
+/* 제목 */
+.mypage-title {
+  font-size: 2rem; /* text-3xl */
+  font-weight: bold;
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+/* Tabs */
+.mypage-tabs {
+  margin-bottom: 2rem; /* space-y-6 대신 */
+}
+
+.mypage-tabs-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  padding: 0.4rem;
+  border-radius: 0.75rem;
+
+  background: var(--bg-page);
+
+}
+
+.mypage-tabs-list button {
+  position: relative;
+
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.6rem;
+
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  background: transparent;
+  color: var(--text-muted);
+
+  cursor: pointer;
+  border: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.mypage-tabs-list button:hover {
+  background: var(--primary-soft);
+  color: var(--primary);
+
+  transform: translateY(-1px);
+}
+
+.mypage-tabs-list button[data-state="active"] {
+  background: var(--bg-card);
+  color: var(--primary);
+
+  font-weight: 600;
+}
+
+
+
+/* 입력폼 */
+.mypage-form-area {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+.mypage-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+/* 버튼 */
+.mypage-btn-row {
+  display: flex;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.mypage-primary-btn {
+  background-color: var( --bg-page);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem; /* rounded-lg */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid ;
+}
+
+.mypage-primary-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.mypage-primary-btn:active {
+  transform: scale(0.95);
+}
+
+/* 리스트 영역 */
+.mypage-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+/* 카드 */
+.mypage-list-item,
+.mypage-simple-item,
+.mypage-form-area > * { /* Card 전체에 적용 */
+  width: 100%; /* 화면 가득 */
+  max-width: 100%;     /* 명시적으로 제한 */
+  padding: 1rem; /* p-4 */
+  border: 1px solid var(--border);
+  border-radius: 0.5rem; /* rounded-lg */
+  box-sizing: border-box;
+  transition: box-shadow 0.2s ease;
+}
+
+.mypage-list-item {
+  padding: 0.875rem 1rem;
+}
+
+.mypage-list-item:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.mypage-list-header {
+  display: flex;
+  justify-content: space-between;
+   align-items: center;
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+/* 점수 표시 */
+.mypage-score {
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(0, 123, 255, 0.1); /* bg-primary/10 */
+  color: var(--primary);
+  border-radius: 9999px;
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500;
+}
+
+/* 날짜/설명 */
+.mypage-meta {
+  font-size: 0.875rem; /* text-sm */
+  color: var(--muted-foreground);
+}
+
+/* 문의 상태 태그 */
+.mypage-status-tag {
+  padding: 0.25rem 0.5rem;
+  background-color: rgba(255, 193, 7, 0.2); /* bg-accent/20 */
+  color: var(--accent);
+  font-size: 0.75rem; /* text-xs */
+  border-radius: 0.25rem;
+}

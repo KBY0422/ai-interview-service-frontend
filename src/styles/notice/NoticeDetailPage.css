@@ -1,0 +1,138 @@
+.notice-detail-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.notice-detail-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+/* 중앙 정렬 */
+.notice-detail-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 제목 */
+.notice-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 32px;
+}
+
+.notice-detail-icon {
+  width: 32px;
+  height: 32px;
+}
+
+/* 날짜 */
+.notice-detail-date {
+  font-size: 14px;
+  font-weight: normal;
+  color: #6b7280;
+}
+
+/* 본문 */
+.notice-detail-content {
+  padding-top: 16px;
+}
+
+.notice-detail-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* 버튼 */
+.notice-detail-buttons {
+  margin-top: 32px;
+  text-align: center;
+}
+
+/* 공통 상태 */
+.notice-detail-center {
+  text-align: center;
+  padding: 80px 0;
+}
+
+.notice-detail-error {
+  text-align: center;
+  font-size: 18px;
+  color: #ef4444;
+}
+/* 제목 및 뱃지 스타일 */
+.notice-detail-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.notice-detail-pin-badge {
+  background-color: #3b82f6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* 메타데이터(날짜, 조회수) 영역 */
+.notice-detail-header {
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 16px;
+}
+
+.notice-detail-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.notice-detail-hit {
+  display: flex;
+  align-items: center;
+}
+
+/* 고정글 카드 특별 스타일 */
+.notice-detail-card.pinned {
+  border: 1px solid #d0e0ff;
+  background-color: #fcfdff;
+}
+
+/* 본문 영역 스타일 */
+.notice-detail-content {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  min-height: 300px;
+}
+
+.notice-text-area {
+  line-height: 1.8;
+  color: #334155;
+  white-space: pre-wrap; /* 서버에서 온 줄바꿈(\n)을 화면에 반영 */
+  font-size: 16px;
+}
+
+/* 버튼 스타일 */
+.notice-detail-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.back-btn {
+  padding: 10px 24px;
+  font-weight: 500;
+}

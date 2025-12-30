@@ -1,0 +1,128 @@
+.center-text {
+  text-align: center;
+  padding: 20px;
+}
+
+.inquiry-detail-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.detail-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 제목 */
+.detail-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+/* 메타 정보 */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.writer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+}
+
+/* 아이콘 */
+.icon-large {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+/* 본문 */
+.content-text {
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* 배지 */
+.badge {
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.badge-question {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-voice {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.badge-wait {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.badge-done {
+  background: #d1fae5;
+  color: #047857;
+}
+
+/* 답변 */
+.answer-title {
+  margin: 32px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #047857;
+}
+
+.answer-card {
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+}
+
+/* 비밀번호 */
+.password-box {
+  max-width: 360px;
+  margin: 40px auto 0;
+}
+
+/* 버튼 */
+.button-group {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.button-group button + button {
+  margin-left: 8px;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

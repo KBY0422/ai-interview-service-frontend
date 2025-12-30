@@ -1,0 +1,222 @@
+/* 전체 설정 */
+#container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-page); /* 변수 적용 */
+    color: var(--text-body); /* 변수 적용 */
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* 메인 */
+#container .main {
+    flex: 1;
+    padding: 50px 0;
+}
+
+/* 하얀 바탕 (중앙 정렬 레이아웃) */
+#container .wrapper {
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+/* 카드 위에 타이틀 */
+#container .title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#container .title h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-main); /* 강조 텍스트 변수 */
+}
+
+/* 카드 */
+#container .card {
+    background: var(--bg-card); /* 변수 적용 */
+    border: 1px solid var(--border-default); /* 변수 적용 */
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+#container .card-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-main);
+}
+
+#container .card-body {
+    margin-top: 20px;
+}
+
+/* 직군선택, 면접유형, 기술스택 div부분*/
+#container .form-box {
+    margin-bottom: 28px;
+}
+
+/* 선택부분 소제목 */
+#container label,
+#container .label-title {
+    font-size: 15px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-body);
+}
+
+/* 선택부분 소제목의 추가 설명 */
+#container .label-title-sub {
+    font-size: 13px;
+    color: var(--text-muted); /* 설명용 흐린 텍스트 변수 */
+    margin-bottom: 12px;
+}
+
+/* 선택 버튼 공통 스타일 (그리드 레이아웃) */
+#container .select,
+#container .selectLevel {
+    display: grid;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+#container .select {
+    grid-template-columns: repeat(3, 1fr);
+}
+#container .selectLevel {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+/* 버튼 아이템들 */
+#container .select-item {
+    padding: 16px 0;
+    border-radius: 12px;
+    border: 1px solid var(--border-default);
+    font-size: 15px;
+    background: var(--bg-card);
+    color: var(--text-body);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+/* 마우스 호버 시 */
+#container .select-item:hover {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+}
+
+/* [핵심] 선택된 상태 (Active) - 테두리 고정으로 크기 밀림 방지 */
+#container .select-item.active {
+    border: 1px solid var(--primary);
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 600;
+    box-shadow: inset 0 0 0 1px var(--primary), 0 0 10px rgba(108, 75, 244, 0.2);
+}
+
+/* 비활성화 상태 */
+.select-item[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: var(--bg-soft);
+}
+
+/* 🔵 기술 스택 – 태그 버튼 */
+#container .tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+#container .tag-item {
+    padding: 8px 14px;
+    border-radius: 20px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    color: var(--text-sub);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+#container .tag-item:hover {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+}
+
+#container .tag-item.active {
+    background: var(--primary-soft);
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    box-shadow: inset 0 0 0 0.5px var(--primary);
+}
+
+/* 시작 버튼 */
+#container .start-btn {
+    width: 100%;
+    padding: 18px 0;
+    background: var(--primary);
+    color: #ffffff;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .start-btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(108, 75, 244, 0.3);
+}
+
+#container .start-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+/* 로딩 스피너 - 애니메이션 동작 보장 */
+.spinner {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    flex-shrink: 0;
+    margin-right: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid #ffffff !important;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite !important;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#container .start-btn:hover:not(:disabled) {
+    background: var(--primary-hover);
+    box-shadow: 0 4px 12px rgba(108, 75, 244, 0.3);
+}
+
+.start-btn:disabled {
+    background: var(--text-muted);
+    opacity: 0.6;
+    cursor: not-allowed;
+}

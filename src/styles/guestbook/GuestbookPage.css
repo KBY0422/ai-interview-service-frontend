@@ -1,0 +1,165 @@
+.guestbook-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.guestbook-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.guestbook-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   Header Area
+========================= */
+.guestbook-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+.guestbook-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.guestbook-title-icon {
+  width: 32px;
+  height: 32px;
+  color: #2563eb; /* primary */
+}
+
+.guestbook-desc {
+  font-size: 14px;
+  color: #6b7280; /* muted */
+}
+
+/* =========================
+   Write Button
+========================= */
+.write-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.write-button:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.write-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* =========================
+   Guestbook List
+========================= */
+.guestbook-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.guestbook-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.guestbook-card {
+  padding: 20px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease;
+}
+
+.guestbook-card:hover {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Guestbook Item Content
+========================= */
+.guestbook-item-inner {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.avatar-fallback {
+  background-color: #e5e7eb;
+  color: #374151;
+  font-weight: 600;
+}
+
+.guestbook-item-content {
+  flex: 1;
+}
+
+.guestbook-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.guestbook-writer {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.guestbook-date {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+.guestbook-title-text {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* =========================
+   Empty State
+========================= */
+.no-data {
+  text-align: center;
+  padding: 40px 0;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* =========================
+   Paging
+========================= */
+.paging-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* =========================
+   Common
+========================= */
+.center-text {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.center-text.error {
+  color: #dc2626;
+}

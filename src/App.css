@@ -1,0 +1,148 @@
+:root {
+    /* 유저 대시보드 점수 색상 */ 
+  --score-good-bg: #dcfce7;   /* green-100 */
+  --score-good-text: #15803d; /* green-700 */
+  --score-bad-bg: #fee2e2;    /* red-100 */
+  --score-bad-text: #dc2626;  /* red-600 */
+
+  /* Radar chart 색상 */
+  --chart-grid: #e5e7eb;
+  --chart-axis: #6b7280;
+  --chart-text: #374151;
+  --chart-area-fill: rgba(108, 75, 244, 0.1); /* Radar 차트 내부 채우기 */
+
+  /* linechart 색상 */
+  --series-tech: #4f46e5;
+  --series-logic: #16a34a;
+  --series-soft: #fa8c16;
+  --series-total: #dc2626;
+
+  /* Background layers */
+  --bg-page: #f7f7fb;
+  --bg-section: #ffffff;
+  --bg-card: #ffffff;
+  --bg-soft: #fafafa;
+  --bg-softness: #fbf0ff;
+
+  /* Text */
+  --text-main: #111827;
+  --text-body: #1f2937;
+  --text-sub: #374151;
+  --text-muted: #6b7280;
+
+  /* 공통 텍스트 별칭 (중요) */
+  --text-color: var(--text-main);
+
+  /* Border */
+  --border-light: #eeeeee;
+  --border-default: #e5e7eb;
+
+  /* Primary */
+  --primary: #6c4bf4;
+  --primary-hover: #5b3ee4;
+  --primary-soft: #efe9ff;
+
+  /* Status */
+  --danger: #ef4444;
+  --success: #22c55e;
+}
+
+/* Dark Mode */
+body[data-theme="dark"] {
+  /* 유저 대시보드 점수 색상 */
+    --score-good-bg: rgba(34, 197, 94, 0.25);
+    --score-good-text: #86efac;
+    --score-bad-bg: rgba(239, 68, 68, 0.25);
+    --score-bad-text: #fca5a5;
+    /* 다크모드에서는 차트 선이 너무 밝으면 눈이 아프므로 약간 톤다운 */
+    --chart-grid: rgba(255, 255, 255, 0.1);
+    --chart-axis: #9ca3af;
+    --chart-text: #9ca3af;
+    
+    /* 다크모드용 차트 시리즈 색상 재정의 (필요시) */
+    --series-tech: #818cf8;
+    --series-logic: #4ade80;
+    --series-soft: #fbbf24;
+    --series-total: #f87171;
+  
+    /* Background layers */
+  --bg-page: #0f1115;
+  --bg-section: #151821;
+  --bg-card: #1f2330;
+  --bg-soft: #252a3a;
+  --bg-softness: #161922;
+
+  /* Text */
+  --text-main: #ffffff;
+  /* 제목 */
+  --text-body: #f9fafb;
+  /* 본문 */
+  --text-sub: #e5e7eb;
+  /* 설명 */
+  --text-muted: #9ca3af;
+  /* 메타 */
+
+  --text-color: var(--text-main);
+
+  /* Border */
+  --border-light: #2a2f3a;
+  --border-default: #32384a;
+
+  /* Primary */
+  --primary: #a78bfa;
+  --primary-hover: #8b6cf7;
+  --primary-soft: #2a255f;
+
+  /* Status */
+  --danger: #f87171;
+  --success: #4ade80;
+}
+html,body,#root {
+  height: 100%;
+}
+/* App Base Layout */
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-page);
+  color: var(--text-body);
+}
+
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-body);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Noto Sans KR", Arial, sans-serif;
+}
+
+.app-content {
+  flex: 1;
+}
+
+/* 링크 */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 버튼 */
+button {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* 부드러운 전환 */
+body,
+.App,
+header,
+footer,
+section,
+div {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}

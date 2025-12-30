@@ -1,0 +1,79 @@
+.center-text {
+  text-align: center;
+  padding: 20px;
+}
+
+/* 페이지 레이아웃 */
+.inquiry-response-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.response-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.response-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 제목 */
+.response-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+/* 메타 */
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.writer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6b7280;
+}
+
+/* 아이콘 */
+.icon-large {
+  width: 32px;
+  height: 32px;
+}
+
+.icon-small {
+  width: 16px;
+  height: 16px;
+}
+
+/* 본문 */
+.content-text {
+  font-size: 16px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* 답변 카드 */
+.response-card {
+  margin-top: 24px;
+}
+
+/* 버튼 */
+.button-group {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.button-group button + button {
+  margin-left: 8px;
+}

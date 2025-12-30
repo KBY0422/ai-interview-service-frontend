@@ -1,0 +1,140 @@
+/* 전체 컨테이너 */
+.register-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.register-main {
+  flex: 1;
+  padding: 3rem 1rem; /* py-12 px-4 */
+}
+
+.register-card {
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 제목 영역 */
+.register-title {
+  font-size: 1.5rem; /* text-2xl */
+  font-weight: 700;
+  text-align: center;
+}
+
+.register-description {
+  text-align: center;
+}
+
+/* CardContent 전체 */
+.register-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* space-y-6 */
+}
+
+/* 약관 박스 */
+.register-terms-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+  padding: 1rem;
+  background-color: rgba(var(--text-muted-rgb, 107, 114, 128), 0.3); /* bg-muted/30 */
+  border-radius: 0.5rem; /* rounded-lg */
+}
+
+.register-terms-title {
+  font-weight: 600;
+}
+
+.register-terms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* space-y-3 */
+}
+
+.register-checkbox-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.register-checkbox-label {
+  font-weight: 500;
+}
+
+.register-terms-depth {
+  margin-left: 1.5rem; /* ml-6 */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.register-checkbox-sub {
+  font-size: 0.875rem; /* text-sm */
+}
+
+/* 입력 영역 */
+.register-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* space-y-4 */
+}
+
+.register-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* space-y-2 */
+}
+
+.register-horizontal {
+  display: flex;
+  gap: 0.5rem; /* gap-2 */
+}
+
+.register-outline-btn {
+  white-space: nowrap;
+  background-color: transparent;
+  border: 1px solid var(--border, #ccc);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+/* 비밀번호 강도 표시 */
+.register-password-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem; /* space-y-1 */
+}
+
+.register-password-text {
+  font-size: 0.75rem; /* text-xs */
+  color: var(--text-muted);
+}
+
+/* 제출 버튼 */
+.register-submit-btn {
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--primary-foreground, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition:
+    filter 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.register-submit-btn:hover {
+  filter: brightness(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.register-submit-btn:active {
+  transform: scale(0.95);
+}

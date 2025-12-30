@@ -1,0 +1,93 @@
+/* 헤더가 fixed(64px)인 환경에서 상단 가려짐 방지 */
+.privacy-page {
+    width: 100%;
+    min-height: calc(100vh - 64px);
+    padding-top: 64px;
+    /* 헤더 높이 */
+    background: var(--bg-page);
+    color: var(--text-body);
+    box-sizing: border-box;
+}
+
+/* 기존 구조 유지 */
+.privacy-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+    color: var(--text-body);
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+.privacy-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: var(--text-main);
+}
+
+.privacy-desc {
+    margin-bottom: 28px;
+    color: var(--text-sub);
+    font-size: 16px;
+}
+
+/* 섹션 카드 */
+.privacy-section {
+    margin-bottom: 20px;
+    padding: 22px 22px;
+    border-radius: 14px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+}
+
+.privacy-section h2 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 14px;
+    color: var(--text-main);
+}
+
+.privacy-section h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 14px 0 8px;
+    color: var(--text-main);
+}
+
+.privacy-section ul {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+.privacy-section li {
+    margin-bottom: 8px;
+    color: var(--text-body);
+}
+
+.privacy-section p {
+    color: var(--text-body);
+    margin: 0;
+}
+
+.privacy-date {
+    margin-top: 14px;
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 모바일 대응 */
+@media screen and (max-width: 768px) {
+    .privacy-container {
+        padding: 40px 16px 60px;
+    }
+
+    .privacy-title {
+        font-size: 24px;
+    }
+
+    .privacy-section {
+        padding: 18px 16px;
+    }
+}

@@ -1,0 +1,103 @@
+.inquiry-write-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f9fafb;
+}
+
+.write-main {
+  flex: 1;
+  padding: 64px 0; /* 좌우 여백 제거 */
+}
+
+/* =========================
+   Wrapper (폭 확장 핵심)
+========================= */
+.write-wrapper {
+  width: 1024px;      /* ✅ 고정 폭 */
+  margin: 0 auto;
+}
+
+.password-wrapper {
+  width: 360px;
+  max-width: 100%;
+  margin: 0 auto;   
+}
+/* =========================
+   Card
+========================= */
+.write-wrapper .card {
+  border-radius: 14px;
+  padding: 8px;
+}
+
+/* =========================
+   Form
+========================= */
+.write-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;          /* 입력 간격 여유 */
+}
+
+/* =========================
+   Select Box
+========================= */
+.select-box {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.select-box:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.18);
+}
+
+/* =========================
+   Input / Textarea
+========================= */
+.write-form input,
+.write-form textarea {
+  font-size: 15px;
+  padding: 12px 14px;
+}
+
+.write-form textarea {
+  min-height: 260px;   /* ✅ 넉넉한 입력 영역 */
+  resize: vertical;
+}
+
+/* =========================
+   Button Group
+========================= */
+.button-group {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+/* =========================
+   Buttons
+========================= */
+.button-group button {
+  min-width: 140px;
+  height: 44px;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.button-group button:hover {
+  filter: brightness(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.button-group button:active {
+  transform: scale(0.96);
+}

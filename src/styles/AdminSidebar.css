@@ -1,0 +1,186 @@
+/* 사이드바 컨테이너 */
+.admin-sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #ffffff;
+    color: #111827;
+    padding: 20px 16px;
+    box-sizing: border-box;
+
+    display: flex;              
+    flex-direction: column;    
+
+    position: sticky;
+    top: 0;
+    border-right: 1px solid #e5e7eb;
+}
+
+/* 로고 */
+.admin-logo {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-align: center;
+    color: #6c4bf4;
+    /* 메인 보라 */
+}
+
+/* 네비게이션 영역 */
+.admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    flex: 1; 
+}
+
+/* ==============================
+   단일 링크
+   ============================== */
+.admin-link {
+    position: relative;
+    padding: 10px 12px;
+    color: #111827;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-link:hover,
+.admin-link.active {
+    background: #efe9ff;
+    /* 연보라 */
+    color: #6c4bf4;
+    /* 메인 보라 */
+}
+
+/* 활성 표시 바 */
+.admin-link.active::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 8px;
+    width: 4px;
+    height: calc(100% - 16px);
+    background: #6c4bf4;
+    border-radius: 2px;
+}
+
+/* ==============================
+   상위 메뉴 버튼
+   ============================== */
+.admin-menu {
+    position: relative;
+}
+
+.admin-menu button {
+    width: 100%;
+    padding: 10px 12px;
+    background: none;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #111827;
+
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-menu button:hover,
+.admin-menu button.open {
+    background: #efe9ff;
+    color: #6c4bf4;
+}
+
+/* 상위 메뉴 활성 바 */
+.admin-menu button.open::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 8px;
+    width: 4px;
+    height: calc(100% - 16px);
+    background: #6c4bf4;
+    border-radius: 2px;
+}
+
+/* ==============================
+   서브메뉴 (슬라이드 애니메이션)
+   ============================== */
+.admin-submenu {
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-4px);
+
+    transition:
+        max-height 0.3s ease,
+        opacity 0.2s ease,
+        transform 0.25s ease;
+}
+
+/* 열림 상태 */
+.admin-submenu.open {
+    max-height: 400px;
+    /* 충분히 큰 값 */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 서브메뉴 링크 */
+.admin-submenu a {
+    position: relative;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    /* 본문 회색 */
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.admin-submenu a:hover {
+    background: #efe9ff;
+    color: #6c4bf4;
+}
+
+/* 서브메뉴 활성 표시 */
+.admin-submenu a.active::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 6px;
+    width: 3px;
+    height: calc(100% - 12px);
+    background: #6c4bf4;
+    border-radius: 2px;
+}
+.admin-logout {
+  margin-top: auto;
+  padding: 16px;
+}
+
+.admin-logout-btn {
+  width: 100%;
+  padding: 10px;
+  background: #2c2c2c;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-logout-btn:hover {
+  background: #444;
+}

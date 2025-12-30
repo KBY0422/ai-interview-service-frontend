@@ -1,0 +1,214 @@
+/* 공통 */
+.analysis-page {
+    background: var(--bg-page, var(--page-bg, #f7f7fb));
+}
+
+.analysis-layout {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    display: flex;
+    gap: 24px;
+    box-sizing: border-box;
+}
+
+.analysis-content,
+.result-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.analysis-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--primary, #6c4bf4);
+}
+
+.analysis-state,
+.analysis-error,
+.analysis-empty {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: var(--text-sub, var(--text-muted, #777));
+}
+
+.analysis-error {
+    color: var(--danger, #ff4b4b);
+}
+
+/* 데스크탑 사이드바 */
+.analysis-sidebar-desktop {
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.analysis-sidebar-box {
+    background: var(--card-bg, var(--bg-card, #ffffff));
+    border-radius: 10px;
+    border: 1px solid var(--border-color, var(--border-default, #eeeeee));
+    padding: 14px 12px;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    position: sticky;
+    top: 88px;
+}
+
+/* 사이드바 내부 */
+.analysis-sidebar-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color, var(--text-main, #333));
+}
+
+.analysis-sidebar-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.analysis-sidebar-item {
+    padding: 8px;
+    background: var(--bg-soft, #fafafa);
+    border-radius: 8px;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: 0.15s;
+}
+
+.analysis-sidebar-item:hover {
+    background: var(--primary-soft, #f0edff);
+    border-color: var(--primary, #6c4bf4);
+}
+
+.analysis-sidebar-item.active {
+    background: var(--primary-soft, #e6ddff);
+    border-color: var(--primary, #6c4bf4);
+}
+
+.sidebar-item-title {
+    font-size: 13px;
+    color: var(--text-color, var(--text-main, #333));
+}
+
+.sidebar-item-meta {
+    font-size: 11px;
+    color: var(--text-sub, var(--text-muted, #777));
+    margin-top: 2px;
+}
+
+/* 카드 2열 */
+.analysis-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.analysis-card {
+    background: var(--card-bg, var(--bg-card, #ffffff));
+    border-radius: 10px;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: var(--text-color, var(--text-main, #333));
+    border: 1px solid var(--border-color, var(--border-default, #e2e2f0));
+    transition: 0.15s ease-out;
+    box-shadow: 0 2px 6px rgba(22, 22, 50, 0.04);
+}
+
+.analysis-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(22, 22, 50, 0.08);
+    border-color: var(--primary, #6c4bf4);
+}
+
+.analysis-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+
+.analysis-card-date {
+    font-size: 12px;
+    color: var(--text-sub, var(--text-muted, #777));
+}
+
+/* (기존에 2번 정의돼 있던 배지 구조 유지) */
+.analysis-card-badge {
+    font-size: 11px;
+    padding: 2px 6px;
+    background: var(--info-bg, #e9f3ff);
+    color: var(--info-text, #3178c6);
+    border-radius: 999px;
+}
+
+.analysis-card-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: var(--text-color, var(--text-main, #333));
+}
+
+.analysis-card-score {
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: var(--text-sub, #555);
+}
+
+.analysis-card-footer {
+    font-size: 12px;
+    color: var(--primary, #6c4bf4);
+}
+
+a.analysis-card {
+    display: block;
+    /* 카드 전체 클릭 */
+    text-decoration: none;
+    /* 밑줄 제거 */
+    color: inherit;
+    /* 글자색 유지 */
+}
+
+a.analysis-card:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* PDF 상태 뱃지 */
+
+/* 카드 */
+.analysis-card-badge {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.analysis-card-badge.pdf-exists {
+    background: var(--primary-soft, #efe9ff);
+    color: var(--primary, #6c4bf4);
+}
+
+.analysis-card-badge.pdf-none {
+    background: var(--bg-soft, #f1f1f1);
+    color: var(--text-muted, #999);
+}
+
+/* 사이드바 */
+.analysis-sidebar-pdf {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+.analysis-sidebar-pdf.pdf-exists {
+    background: var(--primary-soft, #efe9ff);
+    color: var(--primary, #6c4bf4);
+}
+
+.analysis-sidebar-pdf.pdf-none {
+    background: var(--bg-soft, #f1f1f1);
+    color: var(--text-muted, #999);
+}

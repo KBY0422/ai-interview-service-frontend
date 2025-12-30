@@ -1,0 +1,75 @@
+.notice-update-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main */
+.notice-update-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+.notice-update-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* form spacing */
+.notice-update-wrapper input {
+  margin-bottom: 16px;
+}
+
+.notice-update-wrapper textarea {
+  margin-top: 16px;
+}
+
+/* buttons */
+.notice-update-actions {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.notice-update-actions button + button {
+  margin-left: 12px;
+}
+
+/* 기존 CSS 유지 및 아래 내용 보완/추가 */
+
+.update-pin-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pin-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.pin-select {
+  height: 44px;
+  padding: 0 12px;
+  font-size: 15px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+
+.pin-select:focus {
+  border-color: #94a3b8;
+}
+
+/* 수정하기 버튼 강조 (작성 페이지와 통일) */
+.submit-btn {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+.submit-btn:hover {
+  background-color: #333 !important;
+}

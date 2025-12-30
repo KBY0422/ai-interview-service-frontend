@@ -1,0 +1,34 @@
+.notice-delete-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 메인 영역 */
+.notice-delete-main {
+  flex: 1;
+  padding: 48px 16px;
+}
+
+/* 중앙 정렬 */
+.notice-delete-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/* 카드 내부 */
+.notice-delete-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 버튼 영역 */
+.notice-delete-buttons {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.notice-delete-buttons button + button {
+  margin-left: 12px;
+}

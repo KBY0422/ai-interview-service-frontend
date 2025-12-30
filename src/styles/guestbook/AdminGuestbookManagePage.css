@@ -1,0 +1,70 @@
+.admin-page {
+padding: 32px;
+}
+
+
+.admin-header {
+margin-bottom: 32px;
+}
+
+
+.admin-title {
+font-size: 30px;
+font-weight: 700;
+margin-bottom: 8px;
+}
+
+
+.admin-desc {
+color: #6b7280;
+}
+
+
+.admin-loading {
+text-align: center;
+padding: 20px;
+}
+
+
+.admin-error {
+text-align: center;
+color: red;
+}
+
+
+.cell-strong {
+font-weight: 500;
+}
+
+
+.cell-content {
+max-width: 420px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+
+.cell-right {
+text-align: right;
+}
+
+
+.icon-delete {
+width: 16px;
+height: 16px;
+margin-right: 4px;
+}
+
+
+.no-data {
+text-align: center;
+padding: 24px 0;
+}
+
+
+.paging-wrap {
+margin-top: 24px;
+display: flex;
+justify-content: center;
+}

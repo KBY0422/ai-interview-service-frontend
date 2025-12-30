@@ -1,0 +1,291 @@
+.result-main {
+    color: var(--text-color);
+}
+
+.result-main * {
+    color: inherit;
+}
+/* 기본 */
+.result-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.analysis-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: var(--primary);
+    /* ✅ 로고와 동일한 색 */
+}
+
+/* 상태 / 에러 */
+.analysis-state,
+.analysis-error {
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.analysis-error {
+    color: #ff4b4b;
+}
+
+/* 공통 카드 스타일  */
+.card-box {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 18px 22px;
+    box-sizing: border-box;
+}
+
+/* 상단 요약 카드 */
+.result-header-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 18px 22px;
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.result-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.result-job {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.result-meta {
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
+.result-meta .dot {
+    margin: 0 4px;
+}
+
+.result-header-right {
+    text-align: right;
+}
+
+.result-total-label {
+    font-size: 13px;
+    color: var(--text-sub);
+    margin-bottom: 4px;
+}
+
+.result-total-score {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.result-total-score span {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-sub);
+    margin-left: 4px;
+}
+
+/*  점수 박스 */
+.result-score-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.result-score-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 14px 18px;
+    flex: 1;
+}
+
+.result-score-card .label {
+    font-size: 13px;
+    color: var(--text-sub);
+    margin-bottom: 4px;
+}
+
+.result-score-card .value {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.result-score-card .value span {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin-left: 4px;
+}
+
+/* 난이도/오답률  */
+.result-metric-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 12px 18px;
+
+    margin-bottom: 16px;
+    display: flex;
+    gap: 18px;
+    font-size: 13px;
+    color: var(--text-sub);
+}
+
+.result-metric-card .metric-item strong {
+    color: var(--text-color);
+}
+
+/* 텍스트 카드  */
+.result-section-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+}
+
+.result-section-card h2 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.result-section-card p {
+    font-size: 14px;
+    color: var(--text-sub);
+}
+
+.result-section-card ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.result-section-card li {
+    font-size: 14px;
+    color: var(--text-sub);
+    margin-bottom: 4px;
+}
+
+/* 강점/약점 2열 */
+.result-section-row {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.result-section-row .result-section-card {
+    flex: 1;
+}
+
+/* PDF 다운로드 영역  */
+.result-pdf-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 3px 8px rgba(18, 18, 38, 0.04);
+    padding: 16px 18px;
+
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-pdf-text {
+    font-size: 14px;
+    color: var(--text-sub);
+}
+
+.result-pdf-text .warn {
+    font-size: 12px;
+    color: #cc3d3d;
+}
+
+/* PDF 버튼 */
+.pdf-download-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    min-width: 160px;
+    padding: 10px 18px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: all 0.15s ease;
+}
+
+.pdf-download-btn:hover {
+    filter: brightness(0.92);
+}
+
+.pdf-download-btn:disabled {
+    background: var(--border-color);
+    color: var(--text-sub);
+    cursor: not-allowed;
+}
+
+/* 아이콘 */
+.pdf-btn-icon {
+    font-size: 15px;
+    line-height: 1;
+}
+
+/*  PDF 생성 스피너  */
+.pdf-download-btn.loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.pdf-download-btn.loading {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.pdf-download-btn.loading::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+
+    animation: pdf-spin 0.8s linear infinite;
+}
+
+@keyframes pdf-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
