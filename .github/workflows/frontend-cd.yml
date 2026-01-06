@@ -15,6 +15,7 @@ jobs:
         run: |
           echo "REACT_APP_API_BASE_URL=http://3.39.210.150:8080" > .env
           echo "REACT_APP_KAKAO_JAVASCRIPT_KEY=${{ secrets.REACT_APP_KAKAO_JAVASCRIPT_KEY }}" >> .env
+          echo "REACT_APP_OPENAI_API_KEY=${{ secrets.REACT_APP_OPENAI_API_KEY }}" >> .env
 
       - name: Build Docker Image
         run: |
