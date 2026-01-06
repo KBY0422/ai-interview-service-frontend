@@ -5,6 +5,23 @@ import { buildLivePrompt } from "./BuildLivePrompt";
 
 const SESSION_KEY = "interviewState";
 
+
+function safeJsonParse(text) {
+    if (typeof text !== "string") return text;
+
+    try {
+        const cleaned = text
+            .replace(/```json/gi, "")
+            .replace(/```/g, "")
+            .trim();
+
+        return JSON.parse(cleaned);
+    } catch (e) {
+        console.error("JSON 파싱 실패, 원본 응답:", text);
+        return null; // ← 중요
+    }
+}
+
 export function useInterview() {
     const location = useLocation();
     const navigate = useNavigate();
@@ -218,7 +235,7 @@ export function useInterview() {
             try {
                 const response = await askGPT({ msg: prompt, prompts: [] });
                 let data = response.data?.result ?? response.data;
-                if (typeof data === "string") data = JSON.parse(data);
+                data = safeJsonParse(data);
 
                 const hasValidQuestion = data && typeof data.question === "string" && data.question.trim().length > 0;
 
