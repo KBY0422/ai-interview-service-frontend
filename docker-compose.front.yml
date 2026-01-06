@@ -1,0 +1,7 @@
+services:
+  frontend:
+    image: vlzkqlzk/finalproject-frontend:latest
+    container_name: finalproject-frontend
+    restart: unless-stopped
+    ports:
+      - "80:80"
