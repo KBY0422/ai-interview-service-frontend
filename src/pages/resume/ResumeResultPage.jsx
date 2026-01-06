@@ -14,6 +14,19 @@ import { notoSansKR } from "../../fonts/NoToSansKR";
 import { notoSansKR_black } from "../../fonts/NoToSansKR-black";
 import { getPdfToken } from "../../api/api";
 
+
+
+function normalizeTechText(text) {
+  if (!text) return "";
+
+  return text
+    // 문자 사이 줄바꿈 제거
+    .replace(/(\S)\s*\n\s*(\S)/g, "$1 $2")
+    // 여러 공백 정리
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
 export default function ResumeResultPage() {
     const { state } = useLocation();
     const analysis = state?.analysis || [];
@@ -368,12 +381,12 @@ export default function ResumeResultPage() {
                 ...TABLE_BASE,
                 startY: cursorY,
                 head: [["기간", "프로젝트명", "담당역할", "사용기술", "설명"]],
-                body: data.프로젝트.map((p) => [p.기간, p.프로젝트명, p.담당역할, p.사용기술, p.설명]),
+                body: data.프로젝트.map((p) => [p.기간, p.프로젝트명, p.담당역할, normalizeTechText(p.사용기술), p.설명]),
                 styles: {
                     font: "NotoSansKR",
                     fontStyle: "black",
                     fontSize: 9,
-                    valign: "middle",
+                    valign: "top",
                     halign: "center",
                     cellPadding: 3,
                     overflow: "linebreak",
@@ -387,6 +400,13 @@ export default function ResumeResultPage() {
                     halign: "center",
                     valign: "middle",
                     cellPadding: 3,
+                },
+                 columnStyles: {
+                    0: { cellWidth: 22 }, // 기간
+                    1: { cellWidth: 35 }, // 프로젝트명
+                    2: { cellWidth: 28 }, // 담당역할
+                    3: { cellWidth: 32, halign: "left" }, // ✅ 사용기술
+                    4: { cellWidth: "auto", halign: "left" }, // 설명
                 },
                 margin: { left: 10, top: 10, right: 10 },
             });
